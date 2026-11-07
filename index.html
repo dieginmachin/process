@@ -1255,6 +1255,24 @@ html.cur-on,html.cur-on *{cursor:none!important}
 .mstage.live .mhint{animation:hintout .6s var(--ease) 6s forwards}
 @keyframes hintout{to{opacity:0;transform:translateY(6px)}}
 
+/* v20: the layer-check proof and the eight tools */
+.proof209{margin-top:clamp(40px,5vw,64px);background:var(--sheet);color:var(--ink);padding:clamp(20px,2.6vw,32px);border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.08),0 24px 60px -30px rgba(0,0,0,.45)}
+.p209{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,40px);margin-top:14px}
+.p209 b{display:block;font:300 clamp(48px,6vw,92px)/1 var(--display);letter-spacing:-.03em}
+.p209 span{display:block;margin-top:8px;font-size:14px;color:var(--ink-2)}
+.p209-n{margin-top:18px;max-width:60ch;font-size:15px;line-height:1.6;color:var(--ink-2)}
+.t8{list-style:none;margin:clamp(32px,4vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--rule)}
+.t8 li{padding:20px 20px 24px 0;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:8px;min-height:210px}
+.t8 li+li{padding-left:20px;border-left:1px solid var(--rule)}
+.t8 li:nth-child(4n+1){padding-left:0;border-left:0}
+.t8 .n{font:11px var(--mono);letter-spacing:.1em;color:var(--ink-3)}
+.t8 h4{font:300 clamp(22px,2vw,28px)/1.1 var(--display);margin:0}
+.t8 p{font-size:14px;line-height:1.55;color:var(--ink-2);margin:0}
+.t8 .lab{margin-top:auto;color:var(--ink-3)}
+.tools8 .h3big em{color:var(--ink-3)}
+@media (max-width:900px){.t8{grid-template-columns:repeat(2,minmax(0,1fr))}.t8 li:nth-child(4n+1){padding-left:20px;border-left:1px solid var(--rule)}.t8 li:nth-child(2n+1){padding-left:0;border-left:0}}
+@media (max-width:520px){.t8{grid-template-columns:minmax(0,1fr)}.t8 li,.t8 li+li{padding-left:0;border-left:0;min-height:0}.p209{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
 </style>
 <script>document.documentElement.classList.add('js');try{if(!location.hash){history.scrollRestoration='manual';window.scrollTo(0,0)}}catch(e){}</script>
 
@@ -1541,6 +1559,11 @@ html.cur-on,html.cur-on *{cursor:none!important}
         <div data-demo="review-loop" data-ss-fill></div>
       </div>
     </div>
+    <div class="proof209 rv" data-sel>
+      <p class="lab">October 2026 · one real client file · the layer checker</p>
+      <div class="p209"><div><b class="tnum">209</b><span>emails checked</span></div><div><b class="tnum">173</b><span>clean on the first pass</span></div><div><b class="tnum">36</b><span>flagged in seconds, not hours</span></div></div>
+      <p class="p209-n">The same eye that checked 2,705 designs for 102 brands this year. Except now it doesn't blink. A designer still decides what happens to the 36.</p>
+    </div>
   </div>
 </section>
 
@@ -1702,6 +1725,28 @@ $ python3 -I tests/test_capacity.py
       <article class="sk rv d1" data-sel><i class="sk-ic ic-stage" aria-hidden="true"><b></b><b></b><b></b></i><h4>model-review-team</h4><p>Checks the checker. Builds a scored eval set from AI drafts and measures how often the AI reviewer agrees with a human. 9 tests.</p><span class="lab">Encodes · how I judge a model</span></article>
       <article class="sk rv d2" data-sel><i class="sk-ic ic-funnel" aria-hidden="true"><b></b><b></b><b></b></i><h4>studio-ops-team</h4><p>Triages briefs for missing fields, priority and prep level, then reports where the time went, with a source on every number. 11 tests.</p><span class="lab">Encodes · how the studio runs</span></article>
     </div>
+  </div>
+</section>
+
+
+<section class="band tools8" id="tools" data-ch="IV" data-name="The bridge">
+  <div class="wrap">
+    <div class="sec-h">
+      <p class="lab rv">Internal software</p>
+      <h3 class="h3big rv">Eight tools, built in weeks. <em>Each one replaced a job.</em></h3>
+      <p class="rv d1">In January I gave our craft five years. Nine months later I give it twelve months. So I stopped behaving only like a designer and built the tools that replace parts of me, before someone builds them without me.</p>
+    </div>
+    <ol class="t8">
+      <li class="rv" data-sel><span class="n tnum">01</span><h4>The Auto Sorter</h4><p>Connect a Figma file and every email template lands sorted by brand, flow, category, language and year.</p><span class="lab">Replaces · a week of tagging files</span></li>
+      <li class="rv d1" data-sel><span class="n tnum">02</span><h4>The Presenter</h4><p>Paste the approved section, get the client-ready flow map with every email, status and version. A Figma plugin.</p><span class="lab">Replaces · a Friday of screenshots</span></li>
+      <li class="rv d2" data-sel><span class="n tnum">03</span><h4>The Shuffler</h4><p>Remixes approved layers into new layouts without breaking a single rule.</p><span class="lab">Replaces · the first draft</span></li>
+      <li class="rv" data-sel><span class="n tnum">04</span><h4>The Gatekeeper</h4><p>A QA agent that decides if an email is ready for Klaviyo or goes back to the designer.</p><span class="lab">Replaces · the senior's second look</span></li>
+      <li class="rv d1" data-sel><span class="n tnum">05</span><h4>The Brand X Ray</h4><p>Paste any URL, get its whole design system back as tokens.</p><span class="lab">Replaces · the brand audit call</span></li>
+      <li class="rv d2" data-sel><span class="n tnum">06</span><h4>The Capacity Manual</h4><p>17 chapters, 29 live figures, one AI install per chapter.</p><span class="lab">Replaces · onboarding</span></li>
+      <li class="rv" data-sel><span class="n tnum">07</span><h4>Studio Of One</h4><p>Skill teams: a lead, a maker, a reviewer, and one human who presses Approve.</p><span class="lab">Replaces · the org chart</span></li>
+      <li class="rv d1" data-sel><span class="n tnum">08</span><h4>The Content Engine</h4><p>One idea in, a full week of content out, in my voice. I still edit every word.</p><span class="lab">Replaces · the content team</span></li>
+    </ol>
+    <p class="lab src rv">Feed it before it eats you. From the newsletter, Nov 6, 2026.</p>
   </div>
 </section>
 
